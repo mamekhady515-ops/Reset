@@ -7,9 +7,14 @@
 <body>
     <nav>
         <a href="/">Accueil</a> |
-        <a href="/inscription">S'inscrire</a>
+        {% if session.get("email") %}
+            Connecté(e) : {{ session["email"] }} |
+            <a href="/deconnexion">Se déconnecter</a>
+        {% else %}
+            <a href="/inscription">S'inscrire</a> |
+            <a href="/connexion">Se connecter</a>
+        {% endif %}
     </nav>
     <hr>
     {% block contenu %}{% endblock %}
 </body>
-</html>
