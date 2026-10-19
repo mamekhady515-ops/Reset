@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block contenu %}
+    <p>{{ nom_theme }}</p>
+    <h1>{{ fiche.titre }}</h1>
+    <p style="white-space: pre-line">{{ fiche.contenu }}</p>
+    <a href="/fiches">Retour aux thèmes</a>
+{% endblock %}

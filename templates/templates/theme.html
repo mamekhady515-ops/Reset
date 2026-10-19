@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block contenu %}
+    <h1>{{ nom_theme }}</h1>
+    <ul>
+        {% for f in fiches %}
+            <li><a href="/fiche/{{ f.id }}">{{ f.titre }}</a></li>
+        {% else %}
+            <li>Aucune fiche pour l'instant.</li>
+        {% endfor %}
+    </ul>
+    <a href="/fiches">Retour aux thèmes</a>
+{% endblock %}

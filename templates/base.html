@@ -6,7 +6,8 @@
 </head>
 <body>
     <nav>
-        <a href="/">Accueil</a> |
+        <a href="/">Accueil</a> 
+        <a href="/fiches">Conseils</a> 
         {% if session.get("email") %}
             Connecté(e) : {{ session["email"] }} |
             <a href="/deconnexion">Se déconnecter</a>
